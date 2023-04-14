@@ -23,10 +23,14 @@ h1{
   text-align: center;
 }
 
-nav{
+.hju{
+
+  text-align: center;
+}
+.nav{
   display: flex;
-  width: 80vw;
-  justify-content: flex-start;
+  width: auto;
+  justify-content: flex-end;
   padding: 1rem;
 }
 
@@ -40,14 +44,14 @@ a:hover{
   color: rgb(136, 136, 136);
 } 
 
-footer {
+.footer {
   display: flex;
   justify-content: center;
   text-align: center;
   padding: 2rem;
   position: relative;
   bottom: 0;
-  width: 90%;
+  width: auto;
   height: 40px;
   margin-top: 2rem;
 }
@@ -62,6 +66,7 @@ footer > p{
 }
 
 form{
+  padding: 50px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -85,6 +90,7 @@ form{
 }
 
 .card-grid{
+ 
   display: flex;
   justify-content: space-evenly;
   gap: 1rem;
@@ -103,11 +109,14 @@ table {
 
 }
 
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
+.td, th {
+/* border: 1px solid #dddddd; */
+  text-align: center;
   padding: 8px;
-}
+  }
+  .td button{
+    align-content: center;
+  }
 
 tr:nth-child(even) {
   background-color: #dddddd;

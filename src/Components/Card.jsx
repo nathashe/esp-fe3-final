@@ -17,14 +17,17 @@ const Card = ({ selectOdont }) => {
   return (
     <div>
       <p>Odontologo: </p>
-      <div style={{ display: "grid", flexWrap: "wrap", justifyContent: "center", gap: "20px" }}>
+      <div style={{ display: "grid", flexWrap: "wrap", justifyContent: "center"}}>
         {
           info?.map(({id,name,username}) => (
             <div
               key={id} style={{
                 border: "1px solid gray",
                 padding: "10px", borderRadius: "5px",
-                cursor: "pointer"
+                cursor: "pointer",
+                backgroundColor: "beige",
+                color:"gray",
+                margin:"10px"
               }}>
               <p>Odont. {name}
                 <br />

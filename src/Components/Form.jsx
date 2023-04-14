@@ -48,7 +48,7 @@ const Form = () => {
 
   return (
     <div>
-      <form id="register-form" onSubmit={onSubmit}>
+      <form id="register-form" onSubmit={onSubmit} className="form">
       
       <label>Name:</label>
           <input

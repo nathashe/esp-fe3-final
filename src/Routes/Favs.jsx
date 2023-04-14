@@ -17,7 +17,10 @@ const {state, dispatch}=useContext(FavsContext);
               key={id} style={{
                 border: "1px solid gray",
                 padding: "10px", borderRadius: "5px",
-                cursor: "pointer"
+                cursor: "pointer",
+                backgroundColor: "beige",
+                color:"gray",
+                margin:"10px"
               }}>
               <p>Odont. {name}
                 <br />

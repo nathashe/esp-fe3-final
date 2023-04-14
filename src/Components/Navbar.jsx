@@ -13,7 +13,7 @@ const Navbar = () => {
   }
   return (
     <nav className={isDark ? "dark" : "app"}>
-      <div className='navi'>
+      <div className='nav'>
         <Link to="/home">Home</Link>
         <Link to="/contact">Contact</Link>
         <Link to="/favs">Favs</Link>
