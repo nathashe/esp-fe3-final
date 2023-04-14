@@ -1,31 +1,31 @@
 import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
-import { BrowserRouter, Routes,Route } from "react-router-dom";
-import Contact from "./Routes/Contact";
-import Detail from  "./Routes/Detail";
-import Favs from "./Routes/Favs";
-import Home from "./Routes/Home";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { rutas, Login } from "./navigate/Routes";
 
 
-function App() { 
+
+function App() {
 
   return (
-      <div className="App">
-         
     <BrowserRouter>
-     <Routes>
-     <Route path='/contact' element={<Contact/>}/>
-     <Route path='/detail' element={<Detail/>}/>
-     <Route path='/home' element={<Home />}/> 
-    <Route path='/home/detail/:id' element={<Detail />}/> 
-     <Route path='/favs' element={<Favs/>}/>
-     </Routes>
-     </BrowserRouter>
-        
-          <Navbar/>
-          <Footer/> 
+      <div className="App">
+       <Navbar/>
+        <Routes>
+          <Route path="/login" element={<Login />} />
+         <Route>
+          {
+            rutas.map(({ id, path, Component }) => (
+              <Route key={id} path={path} element={<Component />}/>))
+          }
+          </Route>
+          <Route path='/' element={<Navigate to='/login'/>}/>
+        </Routes>
+      
       </div>
-  );
+    </BrowserRouter>
+
+  )
 }
 
 
