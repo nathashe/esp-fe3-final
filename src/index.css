@@ -21,7 +21,7 @@ code {
 
 h1{
   text-align: center;
-}
+  }
 
 .hju{
 
@@ -32,10 +32,12 @@ h1{
   width: auto;
   justify-content: flex-end;
   padding: 1rem;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 a{
-  color: #000;
+  color: hsla(333, 96%, 32%, 0.977);
   text-decoration: none;
   margin: 5px;
   cursor: pointer;
@@ -74,7 +76,9 @@ form{
   height: 100px;
   margin: 0 auto;
 }
-
+.form:hover button{
+  background-color: aquamarine;
+}
 .card{
   display: flex;
   justify-content: space-around;
@@ -141,7 +145,7 @@ gap: 5px;
   background-color: #0a041fab;
   /* background-color: #12121296; */
   color: white;
-}
-.dark > a {
-  color: white;
+  }
+.dark a {
+  color: rgb(54, 196, 186);
 }
