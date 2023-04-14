@@ -18,8 +18,8 @@ const Login = () => {
       
     return (
       
-      <form id='form' onSubmit={ handleSubmit } className='' >
-          <div className=''>
+      <form id='form' onSubmit={ handleSubmit } className='login' >
+          <div className='loginCard'>
             <input
               name='email'
               size='small'
@@ -34,7 +34,7 @@ const Login = () => {
               size='small'
               type='password'
               label='Password *'
-              placeholder='assword'
+              placeholder='Password'
               value={values.password}
               onChange={(e) => setValues({...values, password: e.target.value })}
             />  

@@ -112,7 +112,21 @@ td, th {
 tr:nth-child(even) {
   background-color: #dddddd;
 }
+.login{
+  position: relative;
+  top: 250px;
+  left: 50px;
+}
 
+.loginCard{
+  display: flex;
+flex-direction: column;
+width: 150px;
+gap: 5px;
+}
+.loginCard:hover button{
+  background-color: aquamarine;
+}
 .dark{
   background-color: #12121296;
   color: white;
