@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react'
-
+import React, { useState, useEffect, useContext } from 'react'
+import { FavsContext } from '../context/FavContext';
 export const infoDent = "https://jsonplaceholder.typicode.com/users";
 
 const Card = ({ selectOdont }) => {
   const [info, setInfo] = useState(null);
+  const {state, dispatch}=useContext(FavsContext);
   const getInfo = async () => {
     const response = await fetch(infoDent);
     const resolve = await response.json();
@@ -12,25 +13,25 @@ const Card = ({ selectOdont }) => {
   useEffect(() => {
     getInfo();
   }, []);
-
+ 
   return (
     <div>
       <p>Odontologo: </p>
       <div style={{ display: "grid", flexWrap: "wrap", justifyContent: "center", gap: "20px" }}>
         {
-          info?.map(picture => (
+          info?.map(({id,name,username}) => (
             <div
-              key={picture?.id} style={{
+              key={id} style={{
                 border: "1px solid gray",
                 padding: "10px", borderRadius: "5px",
                 cursor: "pointer"
               }}>
-              <p>Odont. {picture?.name}
+              <p>Odont. {name}
                 <br />
-                Usuario: {picture?.username}
+                Usuario: {username}
               </p>
-              <button onClick={() => selectOdont(picture.id)}>ver</button>
-              <button> ADD favoritos</button>
+              <button onClick={() => selectOdont(id)}>ver</button>
+              <button onClick={() => dispatch({ type: 'ADD', payload: {id,name,username }  }) }> ADD favoritos</button>
             </div>
           ))
         }

@@ -74,7 +74,7 @@ onChange={handleChange}/>
 
       </form>
       <button form="register-form">Enviar</button>
-<button>Cancel</button>
+
     </div>
   );
 };
