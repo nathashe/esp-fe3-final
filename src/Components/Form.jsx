@@ -10,7 +10,7 @@ const Form = () => {
     // Eliminamos los espacios en blanco
     const withoutSpaces = userName.trim();
     // Validamos la extension
-    if (withoutSpaces.length > 2) {
+    if (withoutSpaces.length > 5) {
       return true;
     } else {
       return false;
