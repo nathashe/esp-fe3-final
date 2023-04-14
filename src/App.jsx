@@ -21,7 +21,7 @@ function App() {
           </Route>
           <Route path='/' element={<Navigate to='/login'/>}/>
         </Routes>
-      
+      <Footer/>
       </div>
     </BrowserRouter>
 
