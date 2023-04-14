@@ -1,15 +1,19 @@
+import { useContext } from "react";
 import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { rutas, Login } from "./navigate/Routes";
+import { ModoDarkContext } from "./context/ModoDarkContext";
+
 
 
 
 function App() {
+  const { isModoOscuro } = useContext(ModoDarkContext);
 
   return (
     <BrowserRouter>
-      <div className="App">
+     <div className={isModoOscuro ? "dark" : "app"}>
        <Navbar/>
         <Routes>
           <Route path="/login" element={<Login />} />
