@@ -4,11 +4,10 @@ import React, { createContext, useState } from "react";
 export const ModoDarkContext = createContext({});
 
 const ModoDarkContextProvider = ({ children }) => {
-  const [isModoOscuro, setIsModoOscuro] = useState(false);
-
+  const [isDark, setIsDark ]  = useState(false);
   const state = {
-    isModoOscuro,
-    setIsModoOscuro
+    isDark,
+    setIsDark
   };
 
   return (

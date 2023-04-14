@@ -9,11 +9,11 @@ import { ModoDarkContext } from "./context/ModoDarkContext";
 
 
 function App() {
-  const { isModoOscuro } = useContext(ModoDarkContext);
+  const {  isDark } = useContext(ModoDarkContext);
 
   return (
     <BrowserRouter>
-     <div className={isModoOscuro ? "dark" : "app"}>
+     <div className={isDark ? "dark" : "app"}>
        <Navbar/>
         <Routes>
           <Route path="/login" element={<Login />} />

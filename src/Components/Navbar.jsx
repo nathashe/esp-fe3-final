@@ -3,16 +3,16 @@ import { Link } from 'react-router-dom'
 import { ModoDarkContext } from '../context/ModoDarkContext';
 
 const Navbar = () => {
-  const { isModoOscuro, setIsModoOscuro } = useContext(ModoDarkContext);
+  const {  isDark, setIsDark } = useContext(ModoDarkContext);
   const handleModoDark = () => {
-    if (isModoOscuro) {
-      setIsModoOscuro(false)
+    if (isDark) {
+      setIsDark(false)
     } else {
-      setIsModoOscuro(true)
+      setIsDark(true)
     }
   }
   return (
-    <nav className={isModoOscuro ? "dark" : "app"}>
+    <nav className={isDark ? "dark" : "app"}>
       <div className='navi'>
         <Link to="/home">Home</Link>
         <Link to="/contact">Contact</Link>
