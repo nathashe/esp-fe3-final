@@ -105,17 +105,18 @@ table {
     border-spacing: 0;
     width: 100%;
     display: table;
-    border: 1px solid #ccc;
+    border: 1px solid #cccccc71;
 
 }
 
 .td, th {
 /* border: 1px solid #dddddd; */
-  text-align: center;
+  text-align:center;
   padding: 8px;
+align-content: center;
   }
   .td button{
-    align-content: center;
+    align-content:center;
   }
 
 tr:nth-child(even) {
@@ -137,7 +138,8 @@ gap: 5px;
   background-color: aquamarine;
 }
 .dark{
-  background-color: #12121296;
+  background-color: #0a041fab;
+  /* background-color: #12121296; */
   color: white;
 }
 .dark > a {

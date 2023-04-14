@@ -25,7 +25,7 @@ const Detail = () => {
 
           <div className='td'>
             <h1>{DetailData.name}</h1>
-            <p>
+            <p >
               Odont {DetailData.id}
               <br />
               Email : {DetailData.email}
